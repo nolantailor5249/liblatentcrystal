@@ -1,6 +1,6 @@
-"""connector_851576 - Generator pipeline."""
+"""connector_e95987 - Generator pipeline."""
 import itertools, json
-PIPE_ID = "connector_851576"
+PIPE_ID = "connector_e95987"
 def source(n: int):
     for i in range(n): yield {"seq": i, "pipe": PIPE_ID}
 def transform(stream):

